@@ -5,14 +5,19 @@ import BirthDetailsForm from './components/BirthDetailsForm';
 import ResultCardsGrid from './components/ResultCardsGrid';
 import BirthChartWheel from './components/BirthChartWheel';
 import Footer from './components/Footer';
+import PasswordGate, { isUnlocked } from './components/PasswordGate';
 import './App.css';
 
 export default function App() {
+  const [unlocked, setUnlocked] = useState(isUnlocked);
   const [isLoading, setIsLoading] = useState(false);
   const [showResults, setShowResults] = useState(false);
   const [resultsData, setResultsData] = useState(null);
-
   const resultsRef = useRef(null);
+
+  if (!unlocked) {
+    return <PasswordGate onUnlock={() => setUnlocked(true)} />;
+  }
 
   const handleCtaClick = () => {
     const formSection = document.getElementById('birth-form-section');

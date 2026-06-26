@@ -1562,3 +1562,39 @@ body {
   .corner-star.bottom-left { bottom: 10px; left: 10px; }
   .corner-star.bottom-right { bottom: 10px; right: 10px; }
 }
+
+/* ── Password Gate ───────────────────────────────────────── */
+.password-gate-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-deep);
+  z-index: 9999;
+  overflow: hidden;
+}
+
+.password-gate-card {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 400px;
+  margin: 1rem;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  border: 1px solid rgba(245, 185, 66, 0.18);
+  box-shadow: 0 0 60px rgba(245, 185, 66, 0.08), var(--glass-glow-gold);
+}
+
+@keyframes gate-shake {
+  0%, 100% { transform: translateX(0); }
+  20%       { transform: translateX(-10px); }
+  40%       { transform: translateX(10px); }
+  60%       { transform: translateX(-7px); }
+  80%       { transform: translateX(7px); }
+}
+
+.gate-shake {
+  animation: gate-shake 0.55s ease;
+}
