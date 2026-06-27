@@ -6,7 +6,7 @@ export default function TrustBar() {
           <div className="trust-icon">🪐</div>
           <div className="trust-text">
             <span className="trust-title">वास्तविक ग्रह गणना</span>
-            <span className="trust-subtitle">Prokerala API से</span>
+            <span className="trust-subtitle">प्रमाणित गणना पद्धति</span>
           </div>
         </div>
         <div className="trust-divider">✦</div>
@@ -22,7 +22,7 @@ export default function TrustBar() {
           <div className="trust-icon">🔮</div>
           <div className="trust-text">
             <span className="trust-title">हिंदी में व्याख्या</span>
-            <span className="trust-subtitle">Claude AI से</span>
+            <span className="trust-subtitle">उन्नत ज्योतिष विश्लेषण</span>
           </div>
         </div>
       </div>
