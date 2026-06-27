@@ -42,8 +42,7 @@ export default function PasswordGate({ onUnlock }) {
             placeholder="••••••••"
             value={value}
             onChange={(e) => setValue(e.target.value)}
-            autoFocus
-            style={{ textAlign: 'center', letterSpacing: '0.2em' }}
+            style={{ textAlign: 'center', letterSpacing: '0.2em', touchAction: 'manipulation', fontSize: '16px' }}
           />
           {error && (
             <p style={{ color: '#f76fa0', fontSize: '0.85rem', textAlign: 'center', margin: 0 }}>
